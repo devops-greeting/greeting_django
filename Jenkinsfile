@@ -16,8 +16,7 @@ pipeline {
         }
         stage('Build') {
             steps {
-                sh "ls"
-                sh '/home/servertest/django/build.sh'
+                sh "/var/lib/jenkins/workspace/${jobname}/build.sh"
             }
         }
     }
