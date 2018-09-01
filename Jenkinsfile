@@ -16,7 +16,7 @@ pipeline {
         }
         stage('Build') {
             steps {
-                sh "BUILD_ID=dontKillMe nohup /var/lib/jenkins/workspace/${jobname}/build.sh"
+                sh "BUILD_ID=dontKillMe nohup /var/lib/jenkins/workspace/${jobname}/build.sh &"
             }
         }
     }
