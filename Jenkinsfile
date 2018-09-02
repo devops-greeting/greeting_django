@@ -17,7 +17,7 @@ pipeline {
         stage('Build') {
             steps {
                 echo "${BUILD_ID}"
-                sh "${JENKINS_NODE_COOKIE}=dontKillMe nohup /var/lib/jenkins/workspace/${jobname}/build.sh &"
+                sh "/var/lib/jenkins/workspace/${jobname}/build.sh &"
             }
         }
     }
