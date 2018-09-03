@@ -7,13 +7,17 @@ pipeline {
         jobname = "${env.JOB_NAME}"
         ten = "${params.name}"
     }
-    git {
-        branch : 'master',
-        credentialsId: '12345678',
-        url: 'https://github.com/nguyenhoangnhon/django.git
-    }
-
+	options {
+		skipDefaultCheckout(true)
+	}
     stages {
+        stage('Clone') {
+            steps {
+                git branch : 'master',
+                    credentialsId: '12345678',
+                    url: 'https://github.com/nguyenhoangnhon/django.git'
+            }
+        }
         stage('Build') {
             steps {
                 echo "${BUILD_ID}"
