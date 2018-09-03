@@ -23,5 +23,15 @@ pipeline {
                 sh "JENKINS_NODE_COOKIE=dontKILLME nohup /var/lib/jenkins/workspace/${jobname}/build.sh"
             }
         }
+	stage('Test') {
+	    steps {
+		echo 'Test'
+	    }
+	}
+	stage('Deploy')
+	    steps {
+		echo 'Deploy successfully'
+	    }
+        }		    
     }
 }
