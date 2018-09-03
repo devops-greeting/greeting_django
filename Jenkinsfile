@@ -16,6 +16,7 @@ pipeline {
                 git branch : 'master',
                     credentialsId: '12345678',
                     url: 'https://github.com/nguyenhoangnhon/django.git'
+		checkout scm
             }
         }
         stage('Build') {
