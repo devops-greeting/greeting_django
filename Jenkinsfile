@@ -11,7 +11,7 @@ pipeline {
 		skipDefaultCheckout(true)
 	}
     stages {
-        stage('Clone') {
+        stage('Checkout SCM') {
             steps {
                 git branch : 'master',
                     credentialsId: '12345678',
