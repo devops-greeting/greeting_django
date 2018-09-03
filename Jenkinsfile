@@ -26,6 +26,7 @@ pipeline {
 	stage('Test') {
 	    steps {
 		sh 'pip3 install pytest-django'
+		sh "cd /var/lib/jenkins/workspace/${jobname}"
 		sh 'pytest'
 	    }
 	}
