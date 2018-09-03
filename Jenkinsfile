@@ -7,9 +7,9 @@ pipeline {
         jobname = "${env.JOB_NAME}"
         ten = "${params.name}"
     }
-	options {
-		skipDefaultCheckout(true)
-	}
+    options {
+	skipDefaultCheckout(true)
+    }
     stages {
         stage('Checkout SCM') {
             steps {
