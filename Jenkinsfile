@@ -25,6 +25,7 @@ pipeline {
         }
 	stage('Test') {
 	    steps {
+		sh 'pip3 install pytest-django'
 		sh 'pytest'
 	    }
 	}
