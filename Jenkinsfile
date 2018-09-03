@@ -11,7 +11,9 @@ pipeline {
     stages {
         stage('Clone') {
             steps {
-                checkout scm
+                git branch : 'master',
+                    credentialsId: '12345678',
+                    url: 'https://github.com/nguyenhoangnhon/django.git'
             }
         }
         stage('Build') {
